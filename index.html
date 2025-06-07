@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Portafolio - Fernando Esquivel</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script defer src="translations.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/Logotipo.png" alt="Logo" data-i18n="logo-alt">
+            </div>
+            <ul>
+                <li><a href="#sobre-mi" data-i18n="about">Sobre Mí</a></li>
+                <li><a href="#habilidades" data-i18n="skills">Habilidades</a></li>
+                <li><a href="#proyectos" data-i18n="projects">Proyectos</a></li>
+                <li><a href="#contacto" data-i18n="contact">Contacto</a></li>
+                <li>
+                    <select id="language-selector">
+                        <option value="es">🇪🇸 Español</option>
+                        <option value="en">🇬🇧 English</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Fernando Esquivel</h1>
+            <h2 class="subtitulo" data-i18n="hero-subtitle">Desarrollador Front-End & Diseñador UI/UX</h2>
+            <button class="btn" id="contact-btn" data-i18n="contact-btn">Contáctame</button>
+        </div>
+        <div class="hero-right">
+            <img src="images/Ft-Portafolio.jpg" alt="Imagen de perfil" data-i18n="profile-alt">
+        </div>
+    </section>
+    
+    <section id="sobre-mi" class="sobre-mi">
+        <h2 data-i18n="about-title">Sobre Mí</h2>
+        <div class="sobre-mi-card">
+            <div class="sobre-mi-img">
+                <img src="images/Ft-Portafolio.jpg" alt="Fernando Esquivel" data-i18n="profile-alt">
+            </div>
+            <div class="sobre-mi-content">
+                <h3>Fernando Esquivel <span data-i18n="about-subtitle">Estudiante de Ingeniería en Sistemas y Redes</span></h3>
+                <p data-i18n="about-text">Soy un apasionado por el desarrollo front-end y el diseño UI/UX. Actualmente me enfoco en crear interfaces intuitivas y funcionales mientras profundizo en redes informáticas. Mi objetivo es combinar ambas áreas para construir soluciones tecnológicas integrales.</p>
+                <div class="sobre-mi-buttons">
+                    <button class="btn" id="download-cv" data-i18n="download-cv">Descargar CV</button>
+                    <button class="btn btn-contacto" data-i18n="contact-me">Contactar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="habilidades" class="habilidades">
+        <h2 data-i18n="skills-title">Habilidades</h2>
+        <div class="habilidades-container">
+            <div class="habilidad">
+                <h3 data-percent="90%">HTML</h3>
+                <div class="barra">
+                    <div class="progreso html"></div>
+                </div>
+            </div>
+            <div class="habilidad">
+                <h3 data-percent="85%">CSS</h3>
+                <div class="barra">
+                    <div class="progreso css"></div>
+                </div>
+            </div>
+            <div class="habilidad">
+                <h3 data-percent="75%">JavaScript</h3>
+                <div class="barra">
+                    <div class="progreso javascript"></div>
+                </div>
+            </div>
+            <div class="habilidad">
+                <h3 data-percent="80%" data-i18n="uiux-skill">UI/UX Design</h3>
+                <div class="barra">
+                    <div class="progreso uiux"></div>
+                </div>
+            </div>
+            <div class="habilidad">
+                <h3 data-percent="80%">Figma</h3>
+                <div class="barra">
+                    <div class="progreso uiux"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section id="proyectos" class="proyectos">
+        <h2 data-i18n="projects-title">Mis Proyectos</h2>
+        <div class="proyectos-grid">
+            <!-- Tarjeta 1 -->
+            <div class="proyecto-card">
+                <img src="images/Proyecto_Local.png" alt="Aplicación Web" class="proyecto-img" data-i18n="project1-img-alt">
+                <div class="proyecto-info">
+                    <h3 data-i18n="project1-title">Aplicación Web Huellitas Urbanas</h3>
+                    <p class="proyecto-desc" data-i18n="project1-desc">Sistema de gestión integral para refugio animal, con funcionalidades de adopción, donaciones, registro de mascotas y administración de voluntarios.</p>
+                    
+                    <div class="proyecto-meta">
+                        <div class="proyecto-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        
+                        <div class="proyecto-rol">
+                            <i class="fas fa-user-tie"></i>
+                            <span data-i18n="role-po-dev">Product Owner & Desarrollador Frontend</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-ver-proyecto" data-i18n="view-project">Ver Proyecto</button>
+                </div>
+            </div>
+    
+            <!-- Tarjeta 2 -->
+            <div class="proyecto-card">
+                <img src="images/Proyecto_Web.png" alt="Página Web" class="proyecto-img" data-i18n="project2-img-alt">
+                <div class="proyecto-info">
+                    <h3 data-i18n="project2-title">Página Web Huellitas Urbanas</h3>
+                    <p class="proyecto-desc" data-i18n="project2-desc">Sitio web informativo para el refugio animal, con secciones de adopción, donaciones, consejos de cuidado animal y formulario de contacto.</p>
+                    
+                    <div class="proyecto-meta">
+                        <div class="proyecto-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        
+                        <div class="proyecto-rol">
+                            <i class="fas fa-user-tie"></i>
+                            <span data-i18n="role-ui-dev">Diseñador UI/UX & Desarrollador</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-ver-proyecto" data-i18n="view-project">Ver Proyecto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2 data-i18n="contact-title">Contacto</h2>
+        <p data-i18n="contact-text">¿Interesado en trabajar juntos? ¡Ponte en contacto conmigo!</p>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Nombre" data-i18n="name-placeholder" required>
+            <input type="email" id="email" placeholder="Correo Electrónico" data-i18n="email-placeholder" required>
+            <textarea id="message" placeholder="Mensaje" data-i18n="message-placeholder" required></textarea>
+            <button type="submit" class="btn" data-i18n="send-button">Enviar</button>
+        </form>
+        <p id="form-message"></p>
+    </section>
+
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/fernando-esquivel-3a0a82353/" target="_blank" class="footer-item">
+            <i class="fa-brands fa-linkedin"></i>
+            <span>Fernando Esquivel</span>
+        </a>
+        <a href="https://github.com/Fernando-Esqui23" target="_blank" class="footer-item">
+            <i class="fa-brands fa-github"></i>
+            <span>Fernando-Esqui23</span>
+        </a>
+        <div class="footer-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>7275-9482</span>
+        </div>
+    </footer>
+</body>
+</html>
