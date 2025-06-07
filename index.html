@@ -18,12 +18,21 @@
             <div class="logo">
                 <img src="images/Logotipo.png" alt="Logo" data-i18n="logo-alt">
             </div>
-            <ul>
+            
+            <!-- Botón hamburger para móvil -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Menú de navegación -->
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#sobre-mi" data-i18n="about">Sobre Mí</a></li>
                 <li><a href="#habilidades" data-i18n="skills">Habilidades</a></li>
                 <li><a href="#proyectos" data-i18n="projects">Proyectos</a></li>
                 <li><a href="#contacto" data-i18n="contact">Contacto</a></li>
-                <li>
+                <li class="language-item">
                     <select id="language-selector">
                         <option value="es">🇪🇸 Español</option>
                         <option value="en">🇬🇧 English</option>
@@ -34,149 +43,217 @@
     </header>
 
     <section class="hero">
-        <div class="hero-left">
-            <h1>Fernando Esquivel</h1>
-            <h2 class="subtitulo" data-i18n="hero-subtitle">Desarrollador Front-End & Diseñador UI/UX</h2>
-            <button class="btn" id="contact-btn" data-i18n="contact-btn">Contáctame</button>
-        </div>
-        <div class="hero-right">
-            <img src="images/Ft-Portafolio.jpg" alt="Imagen de perfil" data-i18n="profile-alt">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Fernando Esquivel</h1>
+                <h2 class="subtitulo" data-i18n="hero-subtitle">Desarrollador Front-End & Diseñador UI/UX</h2>
+                <button class="btn" id="contact-btn" data-i18n="contact-btn">Contáctame</button>
+            </div>
+            <div class="hero-right">
+                <img src="images/Ft-Portafolio.jpg" alt="Imagen de perfil" data-i18n="profile-alt">
+            </div>
         </div>
     </section>
     
     <section id="sobre-mi" class="sobre-mi">
-        <h2 data-i18n="about-title">Sobre Mí</h2>
-        <div class="sobre-mi-card">
-            <div class="sobre-mi-img">
-                <img src="images/Ft-Portafolio.jpg" alt="Fernando Esquivel" data-i18n="profile-alt">
-            </div>
-            <div class="sobre-mi-content">
-                <h3>Fernando Esquivel <span data-i18n="about-subtitle">Estudiante de Ingeniería en Sistemas y Redes</span></h3>
-                <p data-i18n="about-text">Soy un apasionado por el desarrollo front-end y el diseño UI/UX. Actualmente me enfoco en crear interfaces intuitivas y funcionales mientras profundizo en redes informáticas. Mi objetivo es combinar ambas áreas para construir soluciones tecnológicas integrales.</p>
-                <div class="sobre-mi-buttons">
-                    <button class="btn" id="download-cv" data-i18n="download-cv">Descargar CV</button>
-                    <button class="btn btn-contacto" data-i18n="contact-me">Contactar</button>
+        <div class="container">
+            <h2 data-i18n="about-title">Sobre Mí</h2>
+            <div class="sobre-mi-card">
+                <div class="sobre-mi-img">
+                    <img src="images/Ft-Portafolio.jpg" alt="Fernando Esquivel" data-i18n="profile-alt">
+                </div>
+                <div class="sobre-mi-content">
+                    <h3>Fernando Esquivel <span data-i18n="about-subtitle">Estudiante de Ingeniería en Sistemas y Redes</span></h3>
+                    <p data-i18n="about-text">Soy un apasionado por el desarrollo front-end y el diseño UI/UX. Actualmente me enfoco en crear interfaces intuitivas y funcionales mientras profundizo en redes informáticas. Mi objetivo es combinar ambas áreas para construir soluciones tecnológicas integrales.</p>
+                    <div class="sobre-mi-buttons">
+                        <button class="btn" id="download-cv" data-i18n="download-cv">Descargar CV</button>
+                        <button class="btn btn-contacto" data-i18n="contact-me">Contactar</button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <section id="habilidades" class="habilidades">
-        <h2 data-i18n="skills-title">Habilidades</h2>
-        <div class="habilidades-container">
-            <div class="habilidad">
-                <h3 data-percent="90%">HTML</h3>
-                <div class="barra">
-                    <div class="progreso html"></div>
+        <div class="container">
+            <h2 data-i18n="skills-title">Habilidades</h2>
+            <div class="habilidades-container">
+                <div class="habilidad">
+                    <div class="habilidad-header">
+                        <h3>HTML</h3>
+                        <span class="percentage" data-percent="90%">90%</span>
+                    </div>
+                    <div class="barra">
+                        <div class="progreso html"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="habilidad">
-                <h3 data-percent="85%">CSS</h3>
-                <div class="barra">
-                    <div class="progreso css"></div>
+                <div class="habilidad">
+                    <div class="habilidad-header">
+                        <h3>CSS</h3>
+                        <span class="percentage" data-percent="85%">85%</span>
+                    </div>
+                    <div class="barra">
+                        <div class="progreso css"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="habilidad">
-                <h3 data-percent="75%">JavaScript</h3>
-                <div class="barra">
-                    <div class="progreso javascript"></div>
+                <div class="habilidad">
+                    <div class="habilidad-header">
+                        <h3>JavaScript</h3>
+                        <span class="percentage" data-percent="75%">75%</span>
+                    </div>
+                    <div class="barra">
+                        <div class="progreso javascript"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="habilidad">
-                <h3 data-percent="80%" data-i18n="uiux-skill">UI/UX Design</h3>
-                <div class="barra">
-                    <div class="progreso uiux"></div>
+                <div class="habilidad">
+                    <div class="habilidad-header">
+                        <h3 data-i18n="uiux-skill">UI/UX Design</h3>
+                        <span class="percentage" data-percent="80%">80%</span>
+                    </div>
+                    <div class="barra">
+                        <div class="progreso uiux"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="habilidad">
-                <h3 data-percent="80%">Figma</h3>
-                <div class="barra">
-                    <div class="progreso uiux"></div>
+                <div class="habilidad">
+                    <div class="habilidad-header">
+                        <h3>Figma</h3>
+                        <span class="percentage" data-percent="80%">80%</span>
+                    </div>
+                    <div class="barra">
+                        <div class="progreso figma"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
  
     <section id="proyectos" class="proyectos">
-        <h2 data-i18n="projects-title">Mis Proyectos</h2>
-        <div class="proyectos-grid">
-            <!-- Tarjeta 1 -->
-            <div class="proyecto-card">
-                <img src="images/Proyecto_Local.png" alt="Aplicación Web" class="proyecto-img" data-i18n="project1-img-alt">
-                <div class="proyecto-info">
-                    <h3 data-i18n="project1-title">Aplicación Web Huellitas Urbanas</h3>
-                    <p class="proyecto-desc" data-i18n="project1-desc">Sistema de gestión integral para refugio animal, con funcionalidades de adopción, donaciones, registro de mascotas y administración de voluntarios.</p>
-                    
-                    <div class="proyecto-meta">
-                        <div class="proyecto-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
+        <div class="container">
+            <h2 data-i18n="projects-title">Mis Proyectos</h2>
+            <div class="proyectos-grid">
+                <!-- Tarjeta 1 -->
+                <div class="proyecto-card">
+                    <div class="proyecto-img-container">
+                        <img src="images/Proyecto_Local.png" alt="Aplicación Web" class="proyecto-img" data-i18n="project1-img-alt">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-i18n="project1-title">Aplicación Web Huellitas Urbanas</h3>
+                        <p class="proyecto-desc" data-i18n="project1-desc">Sistema de gestión integral para refugio animal, con funcionalidades de adopción, donaciones, registro de mascotas y administración de voluntarios.</p>
+                        
+                        <div class="proyecto-meta">
+                            <div class="proyecto-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                            
+                            <div class="proyecto-rol">
+                                <i class="fas fa-user-tie"></i>
+                                <span data-i18n="role-po-dev">Product Owner & Desarrollador Frontend</span>
+                            </div>
                         </div>
                         
-                        <div class="proyecto-rol">
-                            <i class="fas fa-user-tie"></i>
-                            <span data-i18n="role-po-dev">Product Owner & Desarrollador Frontend</span>
-                        </div>
+                        <button class="btn-ver-proyecto" data-i18n="view-project">Ver Proyecto</button>
                     </div>
-                    
-                    <button class="btn-ver-proyecto" data-i18n="view-project">Ver Proyecto</button>
                 </div>
-            </div>
-    
-            <!-- Tarjeta 2 -->
-            <div class="proyecto-card">
-                <img src="images/Proyecto_Web.png" alt="Página Web" class="proyecto-img" data-i18n="project2-img-alt">
-                <div class="proyecto-info">
-                    <h3 data-i18n="project2-title">Página Web Huellitas Urbanas</h3>
-                    <p class="proyecto-desc" data-i18n="project2-desc">Sitio web informativo para el refugio animal, con secciones de adopción, donaciones, consejos de cuidado animal y formulario de contacto.</p>
-                    
-                    <div class="proyecto-meta">
-                        <div class="proyecto-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
+        
+                <!-- Tarjeta 2 -->
+                <div class="proyecto-card">
+                    <div class="proyecto-img-container">
+                        <img src="images/Proyecto_Web.png" alt="Página Web" class="proyecto-img" data-i18n="project2-img-alt">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-i18n="project2-title">Página Web Huellitas Urbanas</h3>
+                        <p class="proyecto-desc" data-i18n="project2-desc">Sitio web informativo para el refugio animal, con secciones de adopción, donaciones, consejos de cuidado animal y formulario de contacto.</p>
+                        
+                        <div class="proyecto-meta">
+                            <div class="proyecto-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            
+                            <div class="proyecto-rol">
+                                <i class="fas fa-user-tie"></i>
+                                <span data-i18n="role-ui-dev">Diseñador UI/UX & Desarrollador</span>
+                            </div>
                         </div>
                         
-                        <div class="proyecto-rol">
-                            <i class="fas fa-user-tie"></i>
-                            <span data-i18n="role-ui-dev">Diseñador UI/UX & Desarrollador</span>
-                        </div>
+                        <button class="btn-ver-proyecto" data-i18n="view-project">Ver Proyecto</button>
                     </div>
-                    
-                    <button class="btn-ver-proyecto" data-i18n="view-project">Ver Proyecto</button>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contacto" class="contacto">
-        <h2 data-i18n="contact-title">Contacto</h2>
-        <p data-i18n="contact-text">¿Interesado en trabajar juntos? ¡Ponte en contacto conmigo!</p>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Nombre" data-i18n="name-placeholder" required>
-            <input type="email" id="email" placeholder="Correo Electrónico" data-i18n="email-placeholder" required>
-            <textarea id="message" placeholder="Mensaje" data-i18n="message-placeholder" required></textarea>
-            <button type="submit" class="btn" data-i18n="send-button">Enviar</button>
-        </form>
-        <p id="form-message"></p>
+        <div class="container">
+            <h2 data-i18n="contact-title">Contacto</h2>
+            <p data-i18n="contact-text">¿Interesado en trabajar juntos? ¡Ponte en contacto conmigo!</p>
+            <form id="contact-form" class="form-container">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Nombre" data-i18n="name-placeholder" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Correo Electrónico" data-i18n="email-placeholder" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Mensaje" data-i18n="message-placeholder" required rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn" data-i18n="send-button">Enviar</button>
+            </form>
+            <p id="form-message"></p>
+        </div>
     </section>
 
     <footer class="footer">
-        <a href="https://www.linkedin.com/in/fernando-esquivel-3a0a82353/" target="_blank" class="footer-item">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>Fernando Esquivel</span>
-        </a>
-        <a href="https://github.com/Fernando-Esqui23" target="_blank" class="footer-item">
-            <i class="fa-brands fa-github"></i>
-            <span>Fernando-Esqui23</span>
-        </a>
-        <div class="footer-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>7275-9482</span>
+        <div class="container">
+            <div class="footer-content">
+                <a href="https://www.linkedin.com/in/fernando-esquivel-3a0a82353/" target="_blank" class="footer-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>Fernando Esquivel</span>
+                </a>
+                <a href="https://github.com/Fernando-Esqui23" target="_blank" class="footer-item">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Fernando-Esqui23</span>
+                </a>
+                <div class="footer-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>7275-9482</span>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        // Funcionalidad del menú hamburger
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Cerrar menú al hacer click en un enlace (en móvil)
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+            
+            // Cerrar menú al hacer click fuera de él
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
