@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     downloadCVBtn.addEventListener("click", () => {
-        window.open("https://drive.google.com/file/d/1JnY9rhJTlOCDCPTEP4X18Z5-RExSMykZ/view?usp=sharing", "_blank");
+        window.open("https://drive.google.com/file/d/1-kUy0xbvhMY-AxBwiYHgmfxBF5bF8kCC/view?usp=drive_link", "_blank");
     });
 
     form.addEventListener("submit", (e) => {
