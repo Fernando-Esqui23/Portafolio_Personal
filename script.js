@@ -1,4 +1,102 @@
-// script.js
+
+// script.js - Versión optimizada y mejorada
+
+// Función para animar elementos al hacer scroll
+function setupScrollAnimations() {
+    // Configuración del observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -20px 0px'
+    };
+
+    // Observer para elementos animables
+    const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Para secciones principales
+                if (entry.target.classList.contains('fade-in-section')) {
+                    entry.target.classList.add('visible');
+                }
+                // Para elementos individuales
+                else {
+                    entry.target.classList.add('animate');
+                }
+                
+                // Animación especial para barras de habilidades
+                if (entry.target.classList.contains('habilidad')) {
+                    const progressBar = entry.target.querySelector('.progreso');
+                    const percentage = entry.target.querySelector('.percentage').getAttribute('data-percent');
+                    progressBar.style.width = percentage;
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Observar todos los elementos animables
+    document.querySelectorAll('.fade-in-section, .proyecto-card, .certificado-card, .habilidad, .sobre-mi-card').forEach((element) => {
+        animationObserver.observe(element);
+    });
+}
+
+// Inicialización cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    // Agregar clases a secciones
+    document.querySelectorAll('.hero, .sobre-mi, .habilidades, .proyectos, .certificados, .contacto').forEach((section) => {
+        section.classList.add('fade-in-section');
+    });
+
+    // Animación inicial para el hero
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        setTimeout(() => {
+            heroSection.classList.add('visible');
+        }, 300);
+    }
+
+    // Configurar animaciones de scroll
+    setupScrollAnimations();
+
+    // [El resto de tu código de traducciones, formulario, etc.]
+});
+
+// Agregar clases fade-in-section a las secciones existentes
+function addFadeInClasses() {
+    const sectionsToAnimate = [
+        '.hero',
+        '.sobre-mi', 
+        '.habilidades', 
+        '.proyectos', 
+        '.certificados',
+        '.contacto'
+    ];
+    
+    sectionsToAnimate.forEach(selector => {
+        const section = document.querySelector(selector);
+        if (section && !section.classList.contains('fade-in-section')) {
+            section.classList.add('fade-in-section');
+        }
+    });
+}
+
+// Inicializar animaciones cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    // Agregar las clases necesarias
+    addFadeInClasses();
+    
+    // Inicializar animaciones
+    setTimeout(() => {
+        animateOnScroll();
+    }, 100);
+    
+    // Animación inicial para el hero (aparecer inmediatamente)
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        setTimeout(() => {
+            heroSection.classList.add('visible');
+        }, 300);
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     // Función para cambiar el idioma
     function updateContent(language) {
@@ -17,6 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    
 
     // Evento para el selector de idioma
     document.getElementById('language-selector').addEventListener('change', (e) => {

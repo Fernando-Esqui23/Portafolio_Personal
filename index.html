@@ -14,28 +14,29 @@
 </head>
 <body>
     <header>
-      <nav>
+    <nav>
     <div class="logo">
         <img src="images/Logotipo.png" alt="Logo" data-i18n="logo-alt">
     </div>
-    <ul class="nav-menu" id="nav-menu">
-        <li><a href="#sobre-mi" data-i18n="about">Sobre Mí</a></li>
-        <li><a href="#habilidades" data-i18n="skills">Habilidades</a></li>
-        <li><a href="#proyectos" data-i18n="projects">Proyectos</a></li>
-        <li><a href="#contacto" data-i18n="contact">Contacto</a></li>
-        <li>
-            <select id="language-selector">
-                <option value="es">🇪🇸 Español</option>
-                <option value="en">🇬🇧 English</option>
-            </select>
-        </li>
+   <ul class="nav-menu" id="nav-menu">
+    <li><a href="#sobre-mi" data-i18n="about">Sobre Mí</a></li>
+    <li><a href="#habilidades" data-i18n="skills">Habilidades</a></li>
+    <li><a href="#proyectos" data-i18n="projects">Proyectos</a></li>
+    <li><a href="#certificados" data-i18n="certificates">Certificados</a></li>
+    <li><a href="#contacto" data-i18n="contact">Contacto</a></li>
+    <li>
+        <select id="language-selector">
+            <option value="es">🇪🇸 Español</option>
+            <option value="en">🇬🇧 English</option>
+        </select>
+    </li>
     </ul>
     <button class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
     </button>
-</nav>
+    </nav>
     </header>
 
     <section class="hero">
@@ -181,6 +182,87 @@
             </div>
         </div>
     </section>
+
+    <!-- Agregar esta sección después de la sección de proyectos y antes de la sección de contacto -->
+
+<section id="certificados" class="certificados fade-in-section">
+    <div class="container">
+        <h2 data-i18n="certificates-title">Certificados y Diplomas</h2>
+        <div class="certificados-grid">
+            <!-- Certificado 1 -->
+            <div class="certificado-card">
+                <div class="certificado-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="certificado-info">
+                    <h3 data-i18n="cert1-title">Desarrollo Web Front-End</h3>
+                    <p class="certificado-institucion" data-i18n="cert1-institution">Instituto Tecnológico</p>
+                    <p class="certificado-fecha" data-i18n="cert1-date">2024</p>
+                    <p class="certificado-desc" data-i18n="cert1-desc">Certificación en desarrollo web front-end con HTML, CSS y JavaScript.</p>
+                    <div class="certificado-skills">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificado 2 -->
+            <div class="certificado-card">
+                <div class="certificado-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="certificado-info">
+                    <h3 data-i18n="cert2-title">Diseño UI/UX</h3>
+                    <p class="certificado-institucion" data-i18n="cert2-institution">Academia de Diseño</p>
+                    <p class="certificado-fecha" data-i18n="cert2-date">2023</p>
+                    <p class="certificado-desc" data-i18n="cert2-desc">Diploma en diseño de interfaces de usuario y experiencia de usuario.</p>
+                    <div class="certificado-skills">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">UI/UX</span>
+                        <span class="skill-tag">Prototipado</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificado 3 -->
+            <div class="certificado-card">
+                <div class="certificado-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="certificado-info">
+                    <h3 data-i18n="cert3-title">Redes y Sistemas</h3>
+                    <p class="certificado-institucion" data-i18n="cert3-institution">Universidad Nacional</p>
+                    <p class="certificado-fecha" data-i18n="cert3-date">En progreso</p>
+                    <p class="certificado-desc" data-i18n="cert3-desc">Carrera de Ingeniería en Sistemas y Redes Informáticas.</p>
+                    <div class="certificado-skills">
+                        <span class="skill-tag">Redes</span>
+                        <span class="skill-tag">Sistemas</span>
+                        <span class="skill-tag">Seguridad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificado 4 -->
+            <div class="certificado-card">
+                <div class="certificado-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="certificado-info">
+                    <h3 data-i18n="cert4-title">JavaScript Avanzado</h3>
+                    <p class="certificado-institucion" data-i18n="cert4-institution">Plataforma Online</p>
+                    <p class="certificado-fecha" data-i18n="cert4-date">2024</p>
+                    <p class="certificado-desc" data-i18n="cert4-desc">Curso especializado en JavaScript ES6+ y frameworks modernos.</p>
+                    <div class="certificado-skills">
+                        <span class="skill-tag">ES6+</span>
+                        <span class="skill-tag">APIs</span>
+                        <span class="skill-tag">Async/Await</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section id="contacto" class="contacto">
         <div class="container">

@@ -821,6 +821,269 @@
             }
         }
 
+        /* Animaciones de aparición para secciones */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Sección Certificados */
+.certificados {
+    background-color: #070d1b;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.certificados h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.certificados h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #1E90FF;
+    border-radius: 2px;
+}
+
+.certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificado-card {
+    background: linear-gradient(135deg, #1a2238 0%, #2a3a5c 100%);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(30, 144, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.certificado-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(30, 144, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.certificado-card:hover::before {
+    left: 100%;
+}
+
+.certificado-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(30, 144, 255, 0.3);
+    border-color: #1E90FF;
+}
+
+.certificado-icon {
+    margin-bottom: 20px;
+}
+
+.certificado-icon i {
+    font-size: 3rem;
+    color: #1E90FF;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.certificado-card:hover .certificado-icon i {
+    transform: scale(1.1);
+}
+
+.certificado-info h3 {
+    font-size: 1.4rem;
+    color: #1E90FF;
+    margin-bottom: 10px;
+}
+
+.certificado-institucion {
+    font-size: 1.1rem;
+    color: #a1c4fd;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.certificado-fecha {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.certificado-desc {
+    color: #d1d1d1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.certificado-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.skill-tag {
+    background-color: rgba(30, 144, 255, 0.2);
+    color: #1E90FF;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid rgba(30, 144, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: #1E90FF;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Animaciones específicas para elementos */
+.proyecto-card,
+.certificado-card,
+.habilidad,
+.sobre-mi-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.proyecto-card.animate,
+.certificado-card.animate,
+.habilidad.animate,
+.sobre-mi-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive para certificados */
+@media screen and (max-width: 768px) {
+    .certificados {
+        padding: 60px 20px;
+    }
+    
+    .certificados h2 {
+        font-size: 2rem;
+    }
+    
+    .certificados-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .certificado-card {
+        padding: 25px;
+    }
+    
+    .certificado-icon i {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .certificados {
+        padding: 50px 15px;
+    }
+    
+    .certificado-card {
+        padding: 20px;
+    }
+    
+    .certificado-info h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Transiciones más rápidas y fluidas */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.proyecto-card,
+.certificado-card,
+.habilidad,
+.sobre-mi-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 
+        opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.proyecto-card.animate,
+.certificado-card.animate,
+.habilidad.animate,
+.sobre-mi-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Eliminar efecto blanco y mejorar hover de certificados */
+.certificado-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.certificado-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(30, 144, 255, 0.1) 0%, 
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificado-card:hover::before {
+    opacity: 1;
+}
+
+/* Barras de habilidades más dinámicas */
+.habilidad.animate .progreso {
+    transition: width 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
         /* Móviles pequeños (hasta 480px) */
         @media screen and (max-width: 480px) {
             .hero-left h1 {
@@ -874,4 +1137,8 @@
                 flex-direction: column;
                 gap: 20px;
             }
+
+            
+        
         }
+
