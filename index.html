@@ -14,28 +14,28 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="images/Logotipo.png" alt="Logo" data-i18n="logo-alt">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#sobre-mi" data-i18n="about">Sobre Mí</a></li>
-                <li><a href="#habilidades" data-i18n="skills">Habilidades</a></li>
-                <li><a href="#proyectos" data-i18n="projects">Proyectos</a></li>
-                <li><a href="#contacto" data-i18n="contact">Contacto</a></li>
-                <li>
-                    <select id="language-selector">
-                        <option value="es">🇪🇸 Español</option>
-                        <option value="en">🇬🇧 English</option>
-                    </select>
-                </li>
-            </ul>
-            <button class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
+      <nav>
+    <div class="logo">
+        <img src="images/Logotipo.png" alt="Logo" data-i18n="logo-alt">
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+        <li><a href="#sobre-mi" data-i18n="about">Sobre Mí</a></li>
+        <li><a href="#habilidades" data-i18n="skills">Habilidades</a></li>
+        <li><a href="#proyectos" data-i18n="projects">Proyectos</a></li>
+        <li><a href="#contacto" data-i18n="contact">Contacto</a></li>
+        <li>
+            <select id="language-selector">
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇬🇧 English</option>
+            </select>
+        </li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
     </header>
 
     <section class="hero">
@@ -224,30 +224,42 @@
     <script>
         // Funcionalidad del menú hamburger
         document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
+    console.log('DOM cargado'); // Para debug
+    
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    console.log('Hamburger:', hamburger); // Para debug
+    console.log('NavMenu:', navMenu); // Para debug
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Hamburger clickeado'); // Para debug
             
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
-            
-            // Cerrar menú al hacer click en un enlace (en móvil)
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                });
-            });
-            
-            // Cerrar menú al hacer click fuera de él
-            document.addEventListener('click', function(event) {
-                if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             });
         });
+        
+        // Cerrar menú al hacer click fuera de él
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    } else {
+        console.error('No se encontraron los elementos hamburger o nav-menu');
+    }
+});
     </script>
 </body>
 </html>

@@ -82,34 +82,96 @@
 
         /* Menú hamburguesa */
         .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 5px;
-        }
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+    z-index: 1001;
+    position: relative;
+}
 
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 3px 0;
-            transition: 0.3s;
-            border-radius: 2px;
-        }
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    display: block;
+}
 
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
+/* Animación del hamburguesa cuando está activo */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
 
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
 
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Responsive - Mostrar hamburguesa en móviles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #070d1b;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
+        padding: 20px 0;
+        z-index: 1000;
+        border-top: 2px solid #1E90FF;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 20px 0;
+    }
+    
+    .nav-menu li a {
+        font-size: 1.2rem;
+        padding: 10px;
+        display: block;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nav-menu li a:hover {
+        background-color: rgba(30, 144, 255, 0.1);
+    }
+    
+    #language-selector {
+        margin: 10px auto;
+        width: fit-content;
+    }
+}
+
+/* Para tablets - ajustar el breakpoint si es necesario */
+@media screen and (max-width: 992px) and (min-width: 769px) {
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav ul li a {
+        font-size: 16px;
+    }
+}
 
         /* Sección Hero */
         .hero {
@@ -395,6 +457,7 @@
         .progreso.css { width: 85%; }
         .progreso.javascript { width: 75%; }
         .progreso.uiux { width: 80%; }
+        .progreso.figma { width: 80%; }
 
         /* Sección Proyectos */
         .proyectos {
