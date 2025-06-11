@@ -50,7 +50,7 @@
         </div>
     </section>
     
-    <section id="sobre-mi" class="sobre-mi">
+    <section id="sobre-mi" class="sobre-mi fade-in-section">
         <div class="container">
             <h2 data-i18n="about-title">Sobre Mí</h2>
             <div class="sobre-mi-card">
@@ -69,60 +69,82 @@
         </div>
     </section>
     
-    <section id="habilidades" class="habilidades">
-        <div class="container">
-            <h2 data-i18n="skills-title">Habilidades</h2>
-            <div class="habilidades-container">
-                <div class="habilidad">
-                    <div class="habilidad-header">
-                        <h3>HTML</h3>
-                        <span class="percentage" data-percent="90%">90%</span>
-                    </div>
-                    <div class="barra">
-                        <div class="progreso html"></div>
-                    </div>
-                </div>
-                <div class="habilidad">
-                    <div class="habilidad-header">
-                        <h3>CSS</h3>
-                        <span class="percentage" data-percent="85%">85%</span>
-                    </div>
-                    <div class="barra">
-                        <div class="progreso css"></div>
-                    </div>
-                </div>
-                <div class="habilidad">
-                    <div class="habilidad-header">
-                        <h3>JavaScript</h3>
-                        <span class="percentage" data-percent="75%">75%</span>
-                    </div>
-                    <div class="barra">
-                        <div class="progreso javascript"></div>
-                    </div>
-                </div>
-                <div class="habilidad">
-                    <div class="habilidad-header">
-                        <h3 data-i18n="uiux-skill">UI/UX Design</h3>
-                        <span class="percentage" data-percent="80%">80%</span>
-                    </div>
-                    <div class="barra">
-                        <div class="progreso uiux"></div>
-                    </div>
-                </div>
-                <div class="habilidad">
-                    <div class="habilidad-header">
-                        <h3>Figma</h3>
-                        <span class="percentage" data-percent="80%">80%</span>
-                    </div>
-                    <div class="barra">
-                        <div class="progreso figma"></div>
-                    </div>
-                </div>
-            </div>
+    <section id="habilidades" class="habilidades fade-in-section">
+
+        <h2 data-i18n="skills-title">Habilidades / Intereses</h2>
+  <div class="container">
+    <div class="switch-buttons">
+      <button class="switch-btn active" data-target="skills">Habilidades</button>
+      <button class="switch-btn" data-target="interests">Intereses</button>
+    </div>
+
+    <!-- Contenedor de Habilidades -->
+    <div class="habilidades-container switch-content" id="skills-content">
+
+      <!-- HTML -->
+      <div class="habilidad">
+        <div class="habilidad-header">
+          <h3>HTML</h3>
+          <span class="percentage" data-percent="70%">70%</span>
         </div>
-    </section>
+        <div class="barra"><div class="progreso html"></div></div>
+      </div>
+
+      <!-- CSS -->
+      <div class="habilidad">
+        <div class="habilidad-header">
+          <h3>CSS</h3>
+          <span class="percentage" data-percent="70%">70%</span>
+        </div>
+        <div class="barra"><div class="progreso css"></div></div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="habilidad">
+        <div class="habilidad-header">
+          <h3>JavaScript</h3>
+          <span class="percentage" data-percent="70%">70%</span>
+        </div>
+        <div class="barra"><div class="progreso javascript"></div></div>
+      </div>
+
+      <!-- Figma -->
+      <div class="habilidad">
+        <div class="habilidad-header">
+          <h3>Figma</h3>
+          <span class="percentage" data-percent="80%">80%</span>
+        </div>
+        <div class="barra"><div class="progreso figma"></div></div>
+      </div>
+
+      <!-- Diseño UI/UX -->
+      <div class="habilidad">
+        <div class="habilidad-header">
+          <h3>Diseño UI/UX</h3>
+          <span class="percentage" data-percent="80%">80%</span>
+        </div>
+        <div class="barra"><div class="progreso uiux"></div></div>
+      </div>
+
+      <!-- ... demás habilidades ... -->
+    </div>
+
+    <!-- Contenedor de Intereses -->
+    <div class="intereses-container switch-content" id="interests-content" style="display: none;">
+      <div class="tags">
+        <span class="tag">Tecnología</span>
+        <span class="tag">Diseño UI/UX</span>
+        <span class="tag">Desarrollo Front-end</span>
+        <span class="tag">Experimentar cosas</span>
+        <span class="tag">IA</span>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
  
-    <section id="proyectos" class="proyectos">
+    <section id="proyectos" class="proyectos fade-in-section">
         <div class="container">
             <h2 data-i18n="projects-title">Mis Proyectos</h2>
             <div class="proyectos-grid">
@@ -191,92 +213,49 @@
         <div class="certificados-grid">
             <!-- Certificado 1 -->
             <div class="certificado-card">
-                <div class="certificado-icon">
-                    <i class="fas fa-certificate"></i>
+                <div class="certificado-img-container">
+                    <img src="images/Certificado - CLIC.png" alt="Certificado Front-End" class="certificado-img">
                 </div>
                 <div class="certificado-info">
-                    <h3 data-i18n="cert1-title">Desarrollo Web Front-End</h3>
+                    <h3 data-i18n="cert1-title">Reconocimiento Congreso CLIC</h3>
                     <p class="certificado-institucion" data-i18n="cert1-institution">Instituto Tecnológico</p>
                     <p class="certificado-fecha" data-i18n="cert1-date">2024</p>
                     <p class="certificado-desc" data-i18n="cert1-desc">Certificación en desarrollo web front-end con HTML, CSS y JavaScript.</p>
-                    <div class="certificado-skills">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
+                 
                 </div>
             </div>
 
             <!-- Certificado 2 -->
             <div class="certificado-card">
-                <div class="certificado-icon">
-                    <i class="fas fa-graduation-cap"></i>
+                <div class="certificado-img-container">
+                    <img src="images/Certificado - Investigacion.png" alt="Certificado UI/UX" class="certificado-img">
                 </div>
                 <div class="certificado-info">
-                    <h3 data-i18n="cert2-title">Diseño UI/UX</h3>
+                    <h3 data-i18n="cert2-title">Diploma Investigacion de Catedra</h3>
                     <p class="certificado-institucion" data-i18n="cert2-institution">Academia de Diseño</p>
                     <p class="certificado-fecha" data-i18n="cert2-date">2023</p>
                     <p class="certificado-desc" data-i18n="cert2-desc">Diploma en diseño de interfaces de usuario y experiencia de usuario.</p>
-                    <div class="certificado-skills">
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">UI/UX</span>
-                        <span class="skill-tag">Prototipado</span>
-                    </div>
+            
                 </div>
             </div>
 
-            <!-- Certificado 3 -->
-            <div class="certificado-card">
-                <div class="certificado-icon">
-                    <i class="fas fa-award"></i>
-                </div>
-                <div class="certificado-info">
-                    <h3 data-i18n="cert3-title">Redes y Sistemas</h3>
-                    <p class="certificado-institucion" data-i18n="cert3-institution">Universidad Nacional</p>
-                    <p class="certificado-fecha" data-i18n="cert3-date">En progreso</p>
-                    <p class="certificado-desc" data-i18n="cert3-desc">Carrera de Ingeniería en Sistemas y Redes Informáticas.</p>
-                    <div class="certificado-skills">
-                        <span class="skill-tag">Redes</span>
-                        <span class="skill-tag">Sistemas</span>
-                        <span class="skill-tag">Seguridad</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificado 4 -->
-            <div class="certificado-card">
-                <div class="certificado-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="certificado-info">
-                    <h3 data-i18n="cert4-title">JavaScript Avanzado</h3>
-                    <p class="certificado-institucion" data-i18n="cert4-institution">Plataforma Online</p>
-                    <p class="certificado-fecha" data-i18n="cert4-date">2024</p>
-                    <p class="certificado-desc" data-i18n="cert4-desc">Curso especializado en JavaScript ES6+ y frameworks modernos.</p>
-                    <div class="certificado-skills">
-                        <span class="skill-tag">ES6+</span>
-                        <span class="skill-tag">APIs</span>
-                        <span class="skill-tag">Async/Await</span>
-                    </div>
-                </div>
-            </div>
+            <!-- Los demás certificados con la misma estructura -->
         </div>
     </div>
 </section>
-
-    <section id="contacto" class="contacto">
+    <section id="contacto" class="contacto fade-in-section">
         <div class="container">
             <h2 data-i18n="contact-title">Contacto</h2>
             <p data-i18n="contact-text">¿Interesado en trabajar juntos? ¡Ponte en contacto conmigo!</p>
-            <form id="contact-form" class="form-container">
+            <form id="contact-form" class="form-container" action="https://formspree.io/f/mwpblggz" method="POST">
                 <div class="form-group">
-                    <input type="text" id="name" placeholder="Nombre" data-i18n="name-placeholder" required>
+                    <input type="text" id="name" name="name" placeholder="Nombre" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" placeholder="Correo Electrónico" data-i18n="email-placeholder" required>
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" placeholder="Mensaje" data-i18n="message-placeholder" required rows="5"></textarea>
+                    <textarea id="message" name="message" placeholder="Mensaje" required rows="5"></textarea>
                 </div>
                 <button type="submit" class="btn" data-i18n="send-button">Enviar</button>
             </form>
@@ -301,6 +280,7 @@
     </footer>
 
     <script>
+
         // Funcionalidad del menú hamburger
         document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM cargado'); // Para debug
