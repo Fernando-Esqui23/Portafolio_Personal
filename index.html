@@ -63,7 +63,7 @@
                     <p data-i18n="about-text">Soy un apasionado por el desarrollo front-end y el diseño UI/UX. Actualmente me enfoco en crear interfaces intuitivas y funcionales mientras profundizo en redes informáticas. Mi objetivo es combinar ambas áreas para construir soluciones tecnológicas integrales.</p>
                     <div class="sobre-mi-buttons">
                         <button class="btn" id="download-cv" data-i18n="download-cv">Descargar CV</button>
-                        <button class="btn btn-contacto" data-i18n="contact-me">Contactar</button>
+                        
                     </div>
                 </div>
             </div>
@@ -75,8 +75,8 @@
         <h2 data-i18n="skills-title">Habilidades / Intereses</h2>
   <div class="container">
     <div class="switch-buttons">
-      <button class="switch-btn active" data-target="skills">Habilidades</button>
-      <button class="switch-btn" data-target="interests">Intereses</button>
+      <button class="switch-btn active" data-i18n="btn-hability" data-target="skills">Habilidades</button>
+      <button class="switch-btn" data-i18n="btn-interests" data-target="interests">Intereses</button>
     </div>
 
     <!-- Contenedor de Habilidades -->
@@ -149,6 +149,7 @@
         <div class="container">
             <h2 data-i18n="projects-title">Mis Proyectos</h2>
             <div class="proyectos-grid">
+
                 <!-- Tarjeta 1 -->
                 <div class="proyecto-card">
                     <div class="proyecto-img-container">
@@ -156,7 +157,8 @@
                     </div>
                     <div class="proyecto-info">
                         <h3 data-i18n="project1-title">Aplicación Web Huellitas Urbanas</h3>
-                        <p class="proyecto-desc" data-i18n="project1-desc">Sistema de gestión integral para refugio animal, con funcionalidades de adopción, donaciones, registro de mascotas y administración de voluntarios.</p>
+                        <p class="proyecto-desc" data-i18n="project1-obj">Objetivo del proyecto: Desarrollar el frontend de un sistema de gestión para un refugio de mascotas, con el fin de facilitar el registro y control de mascotas, voluntarios y donaciones.</p>
+                        <p class="proyecto-desc" data-i18n="project1-desc">Descripción general del proceso de trabajo: Se diseñó una interfaz gráfica enfocada en la usabilidad y simplicidad, adaptada a las tareas cotidianas del personal del refugio. Se priorizó la claridad visual, la navegación intuitiva y la organización funcional del contenido.</p>
                         
                         <div class="proyecto-meta">
                             <div class="proyecto-tags">
@@ -184,8 +186,9 @@
                     </div>
                     <div class="proyecto-info">
                         <h3 data-i18n="project2-title">Página Web Huellitas Urbanas</h3>
-                        <p class="proyecto-desc" data-i18n="project2-desc">Sitio web informativo para el refugio animal, con secciones de adopción, donaciones, consejos de cuidado animal y formulario de contacto.</p>
-                        
+                        <p class="proyecto-desc" data-i18n="project2-obj">Objetivo del proyecto: Desarrollar un sitio web informativo y visualmente atractivo para un refugio de mascotas, con el fin de promover la adopción responsable y facilitar el contacto con potenciales adoptantes.</p>
+                        <p class="proyecto-desc" data-i18n="project2-desc">Descripción general del proceso de trabajo: Se diseñó una estructura enfocada en la navegación intuitiva y la experiencia del usuario. Se destacaron animales disponibles para adopción, organizando la información de forma clara y accesible.</p>
+
                         <div class="proyecto-meta">
                             <div class="proyecto-tags">
                                 <span class="tag">HTML</span>
@@ -250,13 +253,13 @@
             <p data-i18n="contact-text">¿Interesado en trabajar juntos? ¡Ponte en contacto conmigo!</p>
             <form id="contact-form" class="form-container" action="https://formspree.io/f/mwpblggz" method="POST">
                 <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Nombre" required>
+                    <input type="text" id="name" data-i18n="name-contact" name="name" placeholder="Nombre" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="email" id="email" data-i18n="email-contact" name="email" placeholder="Correo Electrónico" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Mensaje" required rows="5"></textarea>
+                    <textarea id="message" data-i18n="message-contact" name="message" placeholder="Mensaje" required rows="5"></textarea>
                 </div>
                 <button type="submit" class="btn" data-i18n="send-button">Enviar</button>
             </form>
