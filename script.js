@@ -134,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 const progressBar = hab.querySelector('.progreso');
                 const percentage = progressBar?.getAttribute('data-percent') || '0%';
-                           hab.querySelector('.percentage')?.getAttribute('data-percent') || '0%';
 
             // Resetear la barra inmediatamente
             progressBar.style.transition = 'none';

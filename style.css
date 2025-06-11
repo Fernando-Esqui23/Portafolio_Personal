@@ -1112,4 +1112,43 @@ nav {
   margin-top: 10px;
 }
 
+/* Estilos generales del nav-menu */
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: var(--color-dark);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  flex-direction: column;
+  gap: 15px;
+  text-align: right;
+}
+
+/* Mostrar menú cuando está activo (modo móvil) */
+.nav-menu.active {
+  display: flex;
+}
+
+/* ✅ Mostrar menú en escritorio */
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
+
 
